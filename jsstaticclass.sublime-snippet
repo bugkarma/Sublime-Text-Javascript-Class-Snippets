@@ -7,12 +7,7 @@
 
       },
 
-      _init = function(val) {
-        console.log('init');
-        _addEventListeners();
-      },
-
-      _addEventListeners = function() {
+      _methodName = function(val) {
         
       },
 
@@ -20,9 +15,6 @@
       add = function(a, b) {
         return a+b;
       };
-
-  // Init
-  _init();
 
   // Reveal
   return {
