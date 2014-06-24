@@ -1,0 +1,31 @@
+<snippet>
+  <content><![CDATA[
+;function ClassName (options) {
+
+  if (arguments.callee._singletonInstance) return arguments.callee._singletonInstance;
+  arguments.callee._singletonInstance = this;
+
+  // Default options
+  var _defaultOptions = {
+    color: 'red'
+  };
+
+  // Override default options
+  if (typeof options==='object') { options = \$.extend(_defaultOptions, options); } else { options = _defaultOptions; }
+
+  // Private members
+  var foobaz = 'Test123';
+
+  // Public members
+  this.foobar = 'FooBar';
+  this.getColor = function() { return foobaz; };
+}
+
+ClassName.prototype.methodName = function() {
+  console.log(this.getColor());
+};
+]]></content>
+  <tabTrigger>jsclasssingleton</tabTrigger>
+  <description>Boilerplate code for a new JS singleton 'class'</description>
+  <scope>source.js</scope>
+</snippet>

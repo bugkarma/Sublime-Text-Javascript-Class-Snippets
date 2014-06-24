@@ -1,0 +1,37 @@
+<snippet>
+  <content><![CDATA[
+;ClassName = (function(){
+
+  // Private members
+  var _settings = {
+
+      },
+
+      _init = function(val) {
+        console.log('init');
+        _addEventListeners();
+      },
+
+      _addEventListeners = function() {
+        
+      },
+
+      // Public members
+      add = function(a, b) {
+        return a+b;
+      };
+
+  // Init
+  _init();
+
+  // Reveal
+  return {
+    add: add
+  };
+  
+})();
+]]></content>
+  <tabTrigger>jsclassstatic</tabTrigger>
+  <description>Boilerplate code for a new JS static 'class'</description>
+  <scope>source.js</scope>
+</snippet>
